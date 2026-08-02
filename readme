@@ -1,0 +1,89 @@
+Project Proposal
+
+Project:Heart Disease Prediction Using Machine Learning
+
+1.Background
+Heart disease is a problem that causes a lot of deaths around the world. So it is very important to find out if someone has heart disease on. This can help doctors make decisions about how to treat the patient. Heart Disease Prediction Using Machine Learning can look at data to find patterns that are connected to heart disease. This project is trying to make a machine learning model that can predict if someone has heart disease. The model will use data like age, type of chest pain blood pressure, cholesterol levels, maximum heart rate and ST depression. By using machine learning algorithms this project wants to show how using data can help doctors make decisions.
+
+2. Problem Statement
+
+Heart disease is still a problem for public health. It can be hard to diagnose on because there are so many things to consider. The usual ways of diagnosing heart disease can take a time and need experts to interpret the results. There is a need for a machine learning model that can predict if someone is likely to have heart disease. This can help doctors make decisions on time. Heart Disease Prediction Using Machine Learning is very important for this.
+
+3. Objectives
+
+General Objective
+
+The main goal of this project is to make and test a machine learning model that can predict heart disease using data. Heart Disease Prediction Using Machine Learning is the focus.
+
+Specific Objectives
+
+•	Look at the heart disease dataset and get it ready for use by handling missing values and encoding features. This is a step for Heart Disease Prediction Using Machine Learning.
+
+•	Do exploratory data analysis to understand how different patient variables are connected. This will help with Heart Disease Prediction Using Machine Learning.
+
+•	Compare different machine learning models like Logistic Regression and Random Forest/XGBoost for predicting heart disease. This is a part of Heart Disease Prediction Using Machine Learning.
+
+•	Test the models using sensitivity, specificity, ROC-AUC, confusion matrix and accuracy. This will help evaluate the Heart Disease Prediction Using Machine Learning models.
+
+•	Look at which features are most important and explain how patient variables affect heart disease prediction. This is crucial for understanding Heart Disease Prediction Using Machine Learning.
+
+4. Dataset
+
+This project will use the UCI Heart Disease Dataset, which's a public dataset that is often used in machine learning research. The dataset has 303 records with 13 clinical features like age, sex, type of chest pain blood pressure, cholesterol level and maximum heart rate. The dataset is available from the UCI Machine Learning Repository.
+
+5. Methodology
+
+The project will follow these steps:
+
+•	Collect the UCI Heart Disease Dataset from the UCI Machine Learning Repository.
+
+•	Get the data ready for use by handling missing values removing duplicates encoding variables and scaling numerical features.
+
+•	Do exploratory data analysis to understand the data.
+
+•	Select the important clinical features and create new features if needed to improve the model.
+
+•	Make a Logistic Regression model. Train Random Forest and XGBoost models.
+
+•	Test the models using accuracy, sensitivity, specificity ROC-AUC score and confusion matrix.
+
+6. Expected Outcomes
+
+This project should produce:
+
+•	A machine learning model that can predict heart disease with accuracy. This is the goal of Heart Disease Prediction Using Machine Learning.
+
+•	A comparison of different machine learning algorithms to find the one. This will help improve Heart Disease Prediction Using Machine Learning.
+
+•	Visualizations that explain relationships between variables. This will help understand Heart Disease Prediction Using Machine Learning.
+
+•	Insights into the important factors that contribute to heart disease prediction. This is crucial for Heart Disease Prediction Using Machine Learning.
+
+•	A predictive system that shows how machine learning can help doctors make decisions. This is the goal of Heart Disease Prediction Using Machine Learning.
+
+7. Tools and Technologies
+
+This project will use:
+
+•	Python as the programming language.
+
+•	Jupyter Notebook as the development environment.
+
+•	Libraries like Pandas, NumPy, Scikit-learn, XGBoost, SHAP and Matplotlib.
+
+8. Timeline
+This is our project timeline:
+Week 1 - Literature Review and Dataset Collection
+Week 2 - Data preprocessing
+Week 3 - Exploratory Data Analysis , model Development  and model Evaluation
+Week 4 - Visualization & Interpretation and Report Writing & Final Presentation	
+
+9. References
+
+1. Dua, D., & Graff, C. (2019). UCI Machine Learning Repository. University of California, Irvine. Https://archive.ics.uci.edu/ml
+
+2. Pedregosa, F., et al. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12 2825–2830.
+
+3. Lundberg, S. M., & Lee S. I. (2017). A Unified Approach to Interpreting Model Predictions. Advances in Neural Information Processing Systems (NeurIPS).
+
+4. Chen, T., & Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. Proceedings of the 22nd ACM SIGKDD International Conference, on Knowledge Discovery and Data Mining.
