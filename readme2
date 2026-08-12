@@ -1,0 +1,53 @@
+Introduction 
+A machine learning model to predict heart disease from clinical data. 
+As a biomedical engineering student, I wanted a project that let me apply ML while
+using my understanding of physiology to interpret the results, not just optimize numbers.
+
+Dataset
+UCI Heart Disease dataset — Cleveland subset. It has 303 patients with 13 clinical features 
+like age, chest pain type, cholesterol, and exercise test results. After removing 6 rows with
+missing data, I worked with 297 patients.
+
+Data Cleaning
+Two columns — ca and thal — had a few missing values, so I dropped those rows since it 
+was a small number. I also converted the target variable, which originally had 5 severity
+levels, into a binary outcome: disease present or not. That gave me a fairly balanced split 
+160 patients without disease, 137 with disease.
+
+EDA / Correlation Analysis
+Before modeling, I looked at which features correlated most with disease presence. 
+The strongest were thal, ca, oldpeak, exang, and cp — these are things like blocked vessels, 
+ST depression during exercise, and chest pain type. Interestingly, cholesterol and blood sugar
+the things people usually associate with heart disease barely correlated at all in this
+dataset.
+
+Modeling
+I trained two models: Logistic Regression as an interpretable baseline, and Random Forest for
+comparison. I split the data 80/20 for training and testing, and scaled the features for 
+logistic regression since it's sensitive to feature magnitude.
+
+Evaluation
+I evaluated using sensitivity, specificity, and ROC-AUC — not just accuracy. In healthcare, missing a real disease case is worse than a false alarm, so recall for the disease class matters most."
+Then give the numbers:
+
+-Logistic regression got 83% accuracy, 79% sensitivity, and a ROC-AUC of 0.95
+-Random forest got 85% accuracy, also 79% sensitivity, and a ROC-AUC of 0.94
+-Both models performed similarly — neither is a clear winner. Logistic regression is
+more interpretable, random forest slightly better on accuracy and specificity.
+
+Interpretation
+I used Random Forest feature importance and SHAP values to understand why 
+the model made its predictions. Chest pain type, thalassemia result, and max heart rate
+were the top predictors. SHAP confirmed the direction too — for example, lower max heart rate
+during exercise pushed predictions toward disease, which matches real physiology, since
+patients with heart disease often can't reach as high a heart rate under exertion.
+
+
+Limitations
+The dataset is small — under 300 patients — and from a single hospital, so it may not 
+generalize well. It's also skewed toward male patients. I didn't have an independent dataset 
+to validate on either.
+
+Next Steps
+I'm now working on deploying this as an interactive app so it's actually usable not just a notebook where someone could enter patient values and get a risk prediction.
+This is because early risk detection can support clinical decision-making, and this shows how domain-specific reasoning understanding what these features actually mean physiologically makes ML more trustworthy and interpretable in healthcare, rather than just treating it as a black box.
