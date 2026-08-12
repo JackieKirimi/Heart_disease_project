@@ -1,11 +1,20 @@
 import streamlit as st
-import joblib
 import numpy as np
 import pandas as pd
 
-# Load the trained model
-model = joblib.load('heart_disease_model.pkl')
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 
+@st.cache_resource
+def train_model():
+    df = pd.read_csv('heart_disease_cleaned.csv')
+    X = df.drop('num', axis=1)
+    y = df['num']
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X, y)
+    return model
+
+model = train_model()
 st.title("Heart Disease Risk Prediction")
 st.write("Enter patient clinical data below to predict heart disease risk.")
 
